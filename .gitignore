@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+*.log
+state.json
+_email_preview.html
