@@ -28,7 +28,10 @@ except Exception:
 SMTP_HOST     = "smtp.mail.me.com"
 SMTP_PORT_TLS = 587
 SMTP_PORT_SSL = 465
-RECIPIENTS    = ["rafael.oliveira@ubs.com", "rafaelxoliver4@gmail.com"]
+# RULE (2026-06-25): PRODUCTION = work address only. The personal test inbox
+# (rafaelxoliver4@gmail.com) is for TESTS ONLY and must NEVER share a recipient
+# list with the work address. Tests override RECIPIENTS to the gmail address.
+RECIPIENTS    = ["rafael.oliveira@ubs.com"]
 
 # A panel refreshed within this many days is "recent" → flagged in the subject.
 RECENT_WINDOW_DAYS = 4
