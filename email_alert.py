@@ -1,4 +1,4 @@
-"""Send the daily Anatel data-status email via iCloud SMTP.
+"""Send the daily Anatel data-status email via Gmail SMTP (ibotatom@gmail.com).
 
 Every run sends an email regardless of change. The SUBJECT flags whether any
 panel refreshed within RECENT_WINDOW_DAYS (default 4); the BODY always shows
@@ -25,7 +25,7 @@ try:
 except Exception:
     LOCAL_TZ = timezone(timedelta(hours=-3))
 
-SMTP_HOST     = "smtp.mail.me.com"
+SMTP_HOST     = "smtp.gmail.com"   # was smtp.mail.me.com (iCloud) — switched to Gmail/ibotatom 2026-06-26
 SMTP_PORT_TLS = 587
 SMTP_PORT_SSL = 465
 # RULE (2026-06-25): PRODUCTION = work address only. The personal test inbox
